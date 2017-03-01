@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-1.11.0.min.js">
+			
+		</script>
+		<style type="text/css">
+			
+			.car{
+				width: 110px;
+				height: 50px;
+				border: 1px solid #ccc;
+				position: relative;
+				border-radius:40px ;
+				background: url(../img3);}
+			.tyre{
+				width: 30px;
+				height: 30px;
+				border-radius: 50%;
+				background:#000000 ;
+				position: absolute;
+				bottom: -10px;
+				animation: fn 1s infinite linear;
+				-webkit-animation: fn 1s infinite linear;
+			}
+			.tyre1{
+				width: 30px;
+				height: 30px;
+				border-radius: 50%;
+				background:#000000 ;
+				position: absolute;
+				bottom: -10px;
+				right: -1px;
+				animation: fn 1s infinite linear;
+				-webkit-animation: fn 1s infinite linear;
+			}
+			@-webkit-kryframes fn{
+				from{
+					-webkit-transform:rotate(-360deg) ;
+					-moz-transform:rotate(-360deg) ;
+					-o-transform:rotate(-360deg) ;
+					-ms-transform:rotate(-360deg) ;
+					transform:rotate(-360deg) ;
+				}
+				to{
+					-webkit-transform:rotate(0deg) ;
+					-moz-transform:rotate(0deg) ;
+					-o-transform:rotate(0deg) ;
+					-ms-transform:rotate(0deg) ;
+					transform:rotate(0deg) ;
+				}
+			}
+			@keyframes fn{
+				from{
+					-webkit-transform:rotate(-360deg) ;
+					-moz-transform:rotate(-360deg) ;
+					-o-transform:rotate(-360deg) ;
+					-ms-transform:rotate(-360deg) ;
+					transform:rotate(-360deg) ;
+				}
+				to{
+					-webkit-transform:rotate(0deg) ;
+					-moz-transform:rotate(0deg) ;
+					-o-transform:rotate(0deg) ;
+					-ms-transform:rotate(0deg) ;
+					transform:rotate(0deg) ;
+				}
+			}
+			.tyre:before{
+				content: "";
+				width: 20px;
+				height: 20px;
+				border-radius:50% ;
+				background: #FF0000;
+				position: absolute;
+				top: 5px;
+				left: 5px;
+			}
+			.tyre1:before{
+				content: "";
+				width: 20px;
+				height: 20px;
+				border-radius:50% ;
+				background: #FF0000;
+				position: absolute;
+				top: 5px;
+				left: 5px;
+			}
+			.gap{
+				background: #3f3f3f;
+				width: 2px;
+				height: 4px;
+				position: absolute;
+				left: 14px;
+				top: 8px;
+				box-shadow: 0 9px 0 #3F3F3F;}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="car">
+				<div class="tyre">
+					<div class="gap"></div>
+				</div>
+				<div class="tyre1">
+					<div class="gap"></div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(".car").click(function(event){
+				$(".car").animate({left:"90%"},2000,function(){
+					$(this).animate({left:"0px"},0)
+				});
+			});
+			setInterval(function(){
+				$(".car").click();
+			},3000)
+			
+			
+		</script>
+	</body>
+</html>

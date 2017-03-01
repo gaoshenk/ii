@@ -1,0 +1,38 @@
+*{ margin: 0; padding: 0; }
+a{ text-decoration: none; }
+.mg1,.mg2{ width: 400; height: 400px; border: 1px solid #ccc; padding: 5px; float: left; margin-right: 10px; margin-bottom: 20px;}
+div img{ display: block; width: 100%; height: 100%; }
+.btn{ clear: both; }
+.btn a{ display: inline-block; width: 100px; height: 45px; line-height: 45px; text-align: center; background: #ccc; border-radius: 5px; color: #000;}
+/*模糊度,单位-像素*/
+.b1{
+	filter:blur(20px);
+	-webkit-filter:blur(20px);
+}
+
+/*变亮*/
+.b2{
+	filter:brightness(10%);
+	-webkit-filter:brightness(10%);
+}
+
+/*对比度*/
+.b3{
+	filter:contrast(50%);
+	-webkit-filter:contrast(50%);
+}
+
+/*阴影*/
+.b4{
+	-webkit-filter:drop-shadow(8px 8px 10px #f00);
+}
+
+/*灰度*/
+.b5{
+	-webkit-filter:grayscale(60%);
+}
+
+/*色相反转  hue-rotate() 单位deg*/
+.b6{
+	-webkit-filter:hue-rotate(100deg);
+}
